@@ -1,14 +1,14 @@
 package com.example.designsupportlibrarydemo
 
 import android.os.Bundle
-import android.support.v4.app.Fragment
-import android.support.v7.widget.LinearLayoutManager
+import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_spring.*
 
-class SpringFragment : Fragment() {
+class SpringFragment : androidx.fragment.app.Fragment() {
 
     private var list: ArrayList<String> = arrayListOf("Snackbar", "TextInputLayout", "CollapsingToolbarLayout")
 
@@ -35,7 +35,8 @@ class SpringFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        rvSpring.layoutManager = LinearLayoutManager(activity)
+        rvSpring.layoutManager =
+            androidx.recyclerview.widget.LinearLayoutManager(activity)
 
 
         adapter = object : BaseAdapter<String>(activity, list) {

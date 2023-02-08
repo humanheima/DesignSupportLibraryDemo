@@ -1,9 +1,9 @@
 package com.example.designsupportlibrarydemo
 
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.app.Fragment
-import android.support.v7.app.AppCompatActivity
+import com.google.android.material.navigation.NavigationView
+import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
 import android.view.Gravity
 import android.view.MenuItem
 import android.widget.Toast
@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
     private val TAG = "MainActivity"
 
     val titles: ArrayList<String> = arrayListOf("Spring", "Summer", "autumn", "winter")
-    val fragments: ArrayList<Fragment> = arrayListOf()
+    val fragments: ArrayList<androidx.fragment.app.Fragment> = arrayListOf()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

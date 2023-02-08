@@ -3,8 +3,8 @@ package com.example.designsupportlibrarydemo
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_collapsing_toolbar_layout.*
 
 class CollapsingToolbarLayoutActivity : AppCompatActivity() {
@@ -28,7 +28,7 @@ class CollapsingToolbarLayoutActivity : AppCompatActivity() {
         setContentView(R.layout.activity_collapsing_toolbar_layout)
         setSupportActionBar(toolbar)
         collapsingToolbar.title = "哆啦A梦"
-        rv.layoutManager = LinearLayoutManager(this)
+        rv.layoutManager = androidx.recyclerview.widget.LinearLayoutManager(this)
 
         adapter = object : BaseAdapter<String>(this, list) {
 
